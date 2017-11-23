@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mobile navigation animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <span class="menu-trigger">
+            <i class="menu-trigger-bar top"></i>
+            <i class="menu-trigger-bar middle"></i>
+            <i class="menu-trigger-bar bottom"></i>
+        </span>
+        <span class="close-trigger">
+            <i class="close-trigger-bar left"></i>
+            <i class="close-trigger-bar right"></i>
+        </span>
+        <span class="logo">
+            <span>
+                logo
+                <i class="logo-title">UX</i>
+                <i class="logo-badge">9</i>
+            </span>
+        </span>
+        <div class="inner-container">
+            <i class="menu-bg top"></i>
+            <i class="menu-bg middle"></i>
+            <i class="menu-bg bottom"></i>
+            <div class="menu-container">
+                <ul class="menu">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">详细</a></li>
+                    <li><a href="#">关于我</a></li>
+                    <li><a href="#">友情链接</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div id="links">
+        <button>打开overflow 查看动画轨迹</button>
+        <a href=""></a>
+    </div>
+    <style>
+        #links {
+            position: relative;
+            z-index: 1002;
+        }
+    </style>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineMax.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./index.js"></script>
+<script>
+    $('#links button').on('click',function () { 
+        $('#container').toggleClass('overflow');
+    })
+</script>
+</html>
